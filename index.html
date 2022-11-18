@@ -33,110 +33,28 @@
         </div>
       </div>
 
-      <div class="searchbar-container">
+      <form class="searchbar-container" id="course-form">
         <div class="input-group search-bar">
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Dollar amount (with dot and two decimal places)"
-            />
-            <span class="input-group-text" role="button">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <button class="btn btn-light" role="button">
-            <i class="fa-solid fa-shuffle"></i>
+          <input
+            type="text"
+            id="search"
+            class="form-control"
+            placeholder="Search for courses or keywords"
+          />
+          <button class="input-group-text" role="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-      </div>
+        </div>
+        <button class="btn btn-light" role="button" id="random">
+          <i class="fa-solid fa-shuffle"></i>
+        </button>
+      </form>
 
-      <p class="text-center h4 mt-5">Search results for: </p>
-
-      <div class="row text-center mt-5 g-0">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 1</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 2</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 3</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 4</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 5</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 6</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 7</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 8</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 9</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 10</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 11</h1>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h1>Course 12</h1>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="result-heading"></div>
+      <div id="courses"></div>
+      <div id="single-course"></div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
