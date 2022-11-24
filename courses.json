@@ -18,5 +18,15 @@
     "course_img": "https://images.pexels.com/photos/2224561/pexels-photo-2224561.jpeg",
     "course_id": 107,
     "course_name": "Python Development"
- }   
+ },
+ {
+    "course_img": "https://images.pexels.com/photos/2224561/pexels-photo-2224561.jpeg",
+    "course_id": 108,
+    "course_name": "Python 2 Development"
+ } ,
+ {
+    "course_img": "https://images.pexels.com/photos/2224561/pexels-photo-2224561.jpeg",
+    "course_id": 109,
+    "course_name": "Python 3 Development"
+ } 
 ]
