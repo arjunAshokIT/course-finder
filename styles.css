@@ -88,6 +88,61 @@ h1 {
 }
 
 
+.single-course {
+  margin: 30px auto;
+  width: 70%;
+}
+
+.single-course img {
+  width: 300px;
+  margin: 15px;
+  border: 4px #fff solid;
+  border-radius: 2px;
+}
+
+.single-course-info {
+  padding: 20px;
+  margin: 20px;
+  border: 5px dashed goldenrod;
+  border-radius: 20px;
+}
+
+.single-course p {
+  margin: o;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.single-course ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.single-course ul li {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
+  color: #2d2013;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+}
+
+.main {
+  margin-top: 3rem;
+}
+
+.main ul {
+ width: 300px;
+ margin: auto;
+}
+
+.main ul span {
+  margin: 5px;
+}
+
 
 @media (max-width: 800px) {
   .courses {

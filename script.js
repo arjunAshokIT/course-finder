@@ -20,6 +20,7 @@ function searchCourse(e) {
         return response.json();
       })
       .then((data) => {
+        singleCourse.innerHTML = '';
         coursesData = data;
         resultHeading.innerHTML = `<h2>Search results for '${searchTerm}':</h2>`;
 
@@ -55,14 +56,6 @@ function searchCourse(e) {
 courseForm.addEventListener("submit", searchCourse);
 
 coursesList.addEventListener("click", function (e) {
-  // const courseInfo = e.path.find((item) => {
-  //   if (item.classList && item.classList.contains("course-info")) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // });
-
   let courseInfo = e.path;
   let selectedCourse;
   for (let info of courseInfo) {
@@ -80,6 +73,34 @@ coursesList.addEventListener("click", function (e) {
     const selectedCourseData = coursesData.find(function (c) {
       return c.course_id === +courseID;
     });
-    console.log(`selectedCourseData: `, selectedCourseData);
+    addCourseToDom(selectedCourseData);
   }
 });
+
+function addCourseToDom(course) {
+  resultHeading.innerHTML = '';
+  coursesList.innerHTML = '';
+
+  const curriculumItems = course.curriculum.map(value => {
+    return `<span class="badge rounded-pill bg-primary">${value}</span>`
+  })
+
+  console.log(`curriculumItems`, curriculumItems);
+
+  
+  singleCourse.innerHTML = `
+  <div class="single-course text-center">
+    <h1>${course.course_name}</h1>
+    <img class="text-center" src="${course.course_img}" alt="${course.course_name}">
+    <div class="single-course-info">
+      ${course.course_description}
+    </div>
+    <div class="main">
+      <h3>Curriculum</h3>
+      <ul>
+        ${curriculumItems.join('')}
+      </ul>
+    </div>
+  </div>
+  `;
+}
